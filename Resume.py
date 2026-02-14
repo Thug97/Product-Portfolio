@@ -11,6 +11,7 @@ st.set_page_config(page_title="AI Resume Critiquer", page_icon="📃", layout="c
 
 st.title("AI Resume Critiquer")
 st.markdown("Upload your resume and get AI-powered feedback tailored to your needs!")
+st.caption("Created by Adithya")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
@@ -63,4 +64,5 @@ if analyze and uploaded_file:
         st.markdown(response.text)
     
     except Exception as e:
+
         st.error(f"An error occured: {str(e)}")
